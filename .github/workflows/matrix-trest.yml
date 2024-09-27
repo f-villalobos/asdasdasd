@@ -1,6 +1,7 @@
 name: 'Matrix Review'
 
 on:
+  push:
   workflow_call:
 
 env:
