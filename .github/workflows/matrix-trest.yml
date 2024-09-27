@@ -16,9 +16,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Bl ${{ matrix.tg_dir }}
     strategy:
+      max-parallel: 3
       matrix:
         tg_dir: [ "centralidp", "sharedidp", "bdrs", "ssi-credential-issuer", "discovery-finder", "bpn-discovery", "wallet-integration-layer", "policy-hub", "semantic-hub", "sync-semantic-models", "authority-schema-registry", "wallet-stub" ]
     steps:
       - run: |
           echo "Hello World {{ matrix.tg_dir }}"
+          sleep 5
     
