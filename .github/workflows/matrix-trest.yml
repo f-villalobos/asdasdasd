@@ -1,0 +1,33 @@
+name: 'aks-shared-int-sdc-coreservices'
+
+on:
+  workflow_call:
+
+env:
+  STAGE: "int"
+  CLUSTER_SHORT: "shr"
+  CLUSTER_LONG: "aks-shared-int-sdc"
+  PROJECT: "coreservices"
+  RUNNER_TAG: "nonprod"
+
+jobs:
+  terraform_plan:
+    name: 'terregrunt plan'
+    #runs-on: ${{ inputs.runner_tag }}
+    #continue-on-error: false
+    #environment: ${{ inputs.environment }}
+    #permissions:
+    #  security-events: write
+    #  contents: read
+    #  actions: read
+    #strategy:
+    #  max-parallel: 1
+    #  fail-fast: false
+    #  matrix:
+    #    tg_dir: [ "centralidp", "sharedidp", "bdrs", "ssi-credential-issuer", "discovery-finder", "bpn-discovery", "wallet-integration-layer", "policy-hub", "semantic-hub", "sync-semantic-models", "authority-schema-registry", "wallet-stub" ]
+    #with:
+    #  environment: 'aks-mgmtaks-mgmt-sdc-stage-read-only'
+    #  tg_working_dir: 'aks-shared-int-sdc/projects/coreservices/applications/${{ matrix.tg_dir }}/vault-secrets'
+    #  runner_tag: 'nonprod'
+    #  subscription_id: '2368a0d0-2acb-4fd8-a785-513140b8e055'
+    #secrets: inherit
