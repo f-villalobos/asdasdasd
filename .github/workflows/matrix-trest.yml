@@ -14,7 +14,7 @@ env:
 jobs:
   example_matrix:
     runs-on: ubuntu-latest
-    name: "Bla {{ matrix.tg_dir }}"
+    name: Bl {{ matrix.* }}
     strategy:
       matrix:
         tg_dir: [ "centralidp", "sharedidp", "bdrs", "ssi-credential-issuer", "discovery-finder", "bpn-discovery", "wallet-integration-layer", "policy-hub", "semantic-hub", "sync-semantic-models", "authority-schema-registry", "wallet-stub" ]
