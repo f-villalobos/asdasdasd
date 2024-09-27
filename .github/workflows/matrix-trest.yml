@@ -1,4 +1,4 @@
-name: 'aks-shared-int-sdc-coreservices'
+name: 'Matrix Review'
 
 on:
   workflow_call:
