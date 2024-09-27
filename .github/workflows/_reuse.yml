@@ -1,0 +1,17 @@
+name: Reuse
+
+on:
+  workflow_call: 
+    inputs:
+      tg_dir:
+        required: true
+        type: string
+
+jobs:
+  job_1:
+    name: "Check num 1"
+    runs-on: ubuntu-latest
+    steps:
+    - name: "Step_1"
+      run: |
+        "Hellow World ${{ inputs.tg_dir }}"
